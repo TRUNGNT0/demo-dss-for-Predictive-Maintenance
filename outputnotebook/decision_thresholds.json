@@ -1,0 +1,7 @@
+{
+  "t_medium": 0.4063398793325486,
+  "t_high": 0.581565052743325,
+  "t_critical": 0.6741135672277587,
+  "final_model": "RandomForestClassifier (Local Pipeline)",
+  "data_source": "synthetic_fallback"
+}

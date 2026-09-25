@@ -1,0 +1,3852 @@
+[
+  {
+    "run_id": "20260923_214753_d94ffa",
+    "created_at": "23/09/2026 21:47:53",
+    "timestamp": "2026-09-23T21:47:53.049321",
+    "total_machines": 5,
+    "counts": {
+      "CRITICAL": 3,
+      "HIGH": 0,
+      "MEDIUM": 0,
+      "NORMAL": 2
+    },
+    "top_priority_machine": "M002",
+    "top_machine_risk": "CRITICAL",
+    "top_machine_score": 0.8274,
+    "inputs": [
+      {
+        "machine_id": "M001",
+        "type": "H",
+        "air_temperature": 301.2,
+        "process_temperature": 311.5,
+        "rotational_speed": 1390,
+        "torque": 68.5,
+        "tool_wear": 235
+      },
+      {
+        "machine_id": "M002",
+        "type": "L",
+        "air_temperature": 299.8,
+        "process_temperature": 307.2,
+        "rotational_speed": 1250,
+        "torque": 58,
+        "tool_wear": 215
+      },
+      {
+        "machine_id": "M003",
+        "type": "M",
+        "air_temperature": 302.5,
+        "process_temperature": 312.8,
+        "rotational_speed": 2100,
+        "torque": 72,
+        "tool_wear": 195
+      },
+      {
+        "machine_id": "M004",
+        "type": "L",
+        "air_temperature": 300.1,
+        "process_temperature": 310.2,
+        "rotational_speed": 1510,
+        "torque": 42,
+        "tool_wear": 180
+      },
+      {
+        "machine_id": "M005",
+        "type": "M",
+        "air_temperature": 298.5,
+        "process_temperature": 308.6,
+        "rotational_speed": 1480,
+        "torque": 38,
+        "tool_wear": 45
+      }
+    ],
+    "results": {
+      "total_machines": 5,
+      "counts": {
+        "CRITICAL": 3,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "NORMAL": 2
+      },
+      "top_priority_machine": "M002",
+      "top_machine_details": {
+        "machine_id": "M002",
+        "type": "L",
+        "raw_inputs": {
+          "machine_id": "M002",
+          "type": "L",
+          "air_temperature": 299.8,
+          "process_temperature": 307.2,
+          "rotational_speed": 1250.0,
+          "torque": 58.0,
+          "tool_wear": 215.0
+        },
+        "failure_probability": 0.8212,
+        "failure_probability_pct": 82.1,
+        "topsis_score": 0.8274,
+        "risk_level": "CRITICAL",
+        "action": "Immediate Maintenance",
+        "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+        "color": "#DC2626",
+        "badge_class": "bg-danger",
+        "contributing_factors": [
+          {
+            "criterion": "Failure_Probability",
+            "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+            "raw_value": 0.82,
+            "normalized_value": 0.881,
+            "weight": 0.38,
+            "contribution_score": 0.3349
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 215.0,
+            "normalized_value": 0.85,
+            "weight": 0.24,
+            "contribution_score": 0.204
+          },
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 58.0,
+            "normalized_value": 0.739,
+            "weight": 0.16,
+            "contribution_score": 0.1182
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.881,
+          "Tool_wear_min": 0.85,
+          "Torque_Nm": 0.739,
+          "Process_temperature_K": 0.309,
+          "Rotational_speed_rpm": 0.226,
+          "Air_temperature_K": 0.515
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M002",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "L",
+            "air_temperature": 299.8,
+            "process_temperature": 307.2,
+            "rotational_speed": 1250.0,
+            "torque": 58.0,
+            "tool_wear": 215.0
+          },
+          "failure_probability": 0.8212,
+          "failure_probability_pct": 82.1,
+          "topsis_score": 0.8274,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.82,
+              "normalized_value": 0.881,
+              "weight": 0.38,
+              "contribution_score": 0.3349
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 215.0,
+              "normalized_value": 0.85,
+              "weight": 0.24,
+              "contribution_score": 0.204
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 58.0,
+              "normalized_value": 0.739,
+              "weight": 0.16,
+              "contribution_score": 0.1182
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.881,
+            "Tool_wear_min": 0.85,
+            "Torque_Nm": 0.739,
+            "Process_temperature_K": 0.309,
+            "Rotational_speed_rpm": 0.226,
+            "Air_temperature_K": 0.515
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M001",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "H",
+            "air_temperature": 301.2,
+            "process_temperature": 311.5,
+            "rotational_speed": 1390.0,
+            "torque": 68.5,
+            "tool_wear": 235.0
+          },
+          "failure_probability": 0.6617,
+          "failure_probability_pct": 66.2,
+          "topsis_score": 0.8033,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.66,
+              "normalized_value": 0.709,
+              "weight": 0.38,
+              "contribution_score": 0.2696
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 235.0,
+              "normalized_value": 0.929,
+              "weight": 0.24,
+              "contribution_score": 0.2229
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 68.5,
+              "normalized_value": 0.883,
+              "weight": 0.16,
+              "contribution_score": 0.1413
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.709,
+            "Tool_wear_min": 0.929,
+            "Torque_Nm": 0.883,
+            "Process_temperature_K": 0.619,
+            "Rotational_speed_rpm": 0.352,
+            "Air_temperature_K": 0.623
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M003",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "M",
+            "air_temperature": 302.5,
+            "process_temperature": 312.8,
+            "rotational_speed": 2100.0,
+            "torque": 72.0,
+            "tool_wear": 195.0
+          },
+          "failure_probability": 0.5405,
+          "failure_probability_pct": 54.1,
+          "topsis_score": 0.6953,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.54,
+              "normalized_value": 0.579,
+              "weight": 0.38,
+              "contribution_score": 0.2199
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 195.0,
+              "normalized_value": 0.771,
+              "weight": 0.24,
+              "contribution_score": 0.185
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 72.0,
+              "normalized_value": 0.931,
+              "weight": 0.16,
+              "contribution_score": 0.149
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.579,
+            "Tool_wear_min": 0.771,
+            "Torque_Nm": 0.931,
+            "Process_temperature_K": 0.712,
+            "Rotational_speed_rpm": 0.993,
+            "Air_temperature_K": 0.723
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M004",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "L",
+            "air_temperature": 300.1,
+            "process_temperature": 310.2,
+            "rotational_speed": 1510.0,
+            "torque": 42.0,
+            "tool_wear": 180.0
+          },
+          "failure_probability": 0.027,
+          "failure_probability_pct": 2.7,
+          "topsis_score": 0.2795,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 180.0,
+              "normalized_value": 0.711,
+              "weight": 0.24,
+              "contribution_score": 0.1708
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 42.0,
+              "normalized_value": 0.519,
+              "weight": 0.16,
+              "contribution_score": 0.0831
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 310.2,
+              "normalized_value": 0.525,
+              "weight": 0.1,
+              "contribution_score": 0.0525
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.025,
+            "Tool_wear_min": 0.711,
+            "Torque_Nm": 0.519,
+            "Process_temperature_K": 0.525,
+            "Rotational_speed_rpm": 0.46,
+            "Air_temperature_K": 0.538
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M005",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "M",
+            "air_temperature": 298.5,
+            "process_temperature": 308.6,
+            "rotational_speed": 1480.0,
+            "torque": 38.0,
+            "tool_wear": 45.0
+          },
+          "failure_probability": 0.0185,
+          "failure_probability_pct": 1.8,
+          "topsis_score": 0.0438,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 38.0,
+              "normalized_value": 0.464,
+              "weight": 0.16,
+              "contribution_score": 0.0743
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 45.0,
+              "normalized_value": 0.178,
+              "weight": 0.24,
+              "contribution_score": 0.0427
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 308.6,
+              "normalized_value": 0.41,
+              "weight": 0.1,
+              "contribution_score": 0.041
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.016,
+            "Tool_wear_min": 0.178,
+            "Torque_Nm": 0.464,
+            "Process_temperature_K": 0.41,
+            "Rotational_speed_rpm": 0.433,
+            "Air_temperature_K": 0.415
+          },
+          "priority_rank": 5
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  },
+  {
+    "run_id": "20260923_214539_c1fa6b",
+    "created_at": "23/09/2026 21:45:39",
+    "timestamp": "2026-09-23T21:45:39.508665",
+    "total_machines": 5,
+    "counts": {
+      "CRITICAL": 0,
+      "HIGH": 2,
+      "MEDIUM": 1,
+      "NORMAL": 2
+    },
+    "top_priority_machine": "M002",
+    "top_machine_risk": "HIGH",
+    "top_machine_score": 0.6504,
+    "inputs": [
+      {
+        "machine_id": "M001",
+        "type": "L",
+        "air_temperature": 298.2,
+        "process_temperature": 308.5,
+        "rotational_speed": 1530,
+        "torque": 38.5,
+        "tool_wear": 25
+      },
+      {
+        "machine_id": "M002",
+        "type": "M",
+        "air_temperature": 299,
+        "process_temperature": 309.2,
+        "rotational_speed": 1500,
+        "torque": 39,
+        "tool_wear": 40
+      },
+      {
+        "machine_id": "M003",
+        "type": "H",
+        "air_temperature": 300.1,
+        "process_temperature": 310.3,
+        "rotational_speed": 1520,
+        "torque": 41.2,
+        "tool_wear": 15
+      },
+      {
+        "machine_id": "M004",
+        "type": "L",
+        "air_temperature": 297.8,
+        "process_temperature": 308,
+        "rotational_speed": 1490,
+        "torque": 36.5,
+        "tool_wear": 50
+      },
+      {
+        "machine_id": "M005",
+        "type": "L",
+        "air_temperature": 299.5,
+        "process_temperature": 309.7,
+        "rotational_speed": 1540,
+        "torque": 40,
+        "tool_wear": 30
+      }
+    ],
+    "results": {
+      "total_machines": 5,
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 2,
+        "MEDIUM": 1,
+        "NORMAL": 2
+      },
+      "top_priority_machine": "M002",
+      "top_machine_details": {
+        "machine_id": "M002",
+        "type": "M",
+        "raw_inputs": {
+          "machine_id": "M002",
+          "type": "M",
+          "air_temperature": 299.0,
+          "process_temperature": 309.2,
+          "rotational_speed": 1500.0,
+          "torque": 39.0,
+          "tool_wear": 40.0
+        },
+        "failure_probability": 0.0198,
+        "failure_probability_pct": 2.0,
+        "topsis_score": 0.6504,
+        "risk_level": "HIGH",
+        "action": "Schedule Maintenance",
+        "action_vi": "Lập kế hoạch bảo trì sớm",
+        "color": "#EA580C",
+        "badge_class": "bg-warning text-dark",
+        "contributing_factors": [
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 39.0,
+            "normalized_value": 0.478,
+            "weight": 0.16,
+            "contribution_score": 0.0765
+          },
+          {
+            "criterion": "Process_temperature_K",
+            "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+            "raw_value": 309.2,
+            "normalized_value": 0.453,
+            "weight": 0.1,
+            "contribution_score": 0.0453
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 40.0,
+            "normalized_value": 0.158,
+            "weight": 0.24,
+            "contribution_score": 0.0379
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.018,
+          "Tool_wear_min": 0.158,
+          "Torque_Nm": 0.478,
+          "Process_temperature_K": 0.453,
+          "Rotational_speed_rpm": 0.451,
+          "Air_temperature_K": 0.454
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M002",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "M",
+            "air_temperature": 299.0,
+            "process_temperature": 309.2,
+            "rotational_speed": 1500.0,
+            "torque": 39.0,
+            "tool_wear": 40.0
+          },
+          "failure_probability": 0.0198,
+          "failure_probability_pct": 2.0,
+          "topsis_score": 0.6504,
+          "risk_level": "HIGH",
+          "action": "Schedule Maintenance",
+          "action_vi": "Lập kế hoạch bảo trì sớm",
+          "color": "#EA580C",
+          "badge_class": "bg-warning text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.0,
+              "normalized_value": 0.478,
+              "weight": 0.16,
+              "contribution_score": 0.0765
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.2,
+              "normalized_value": 0.453,
+              "weight": 0.1,
+              "contribution_score": 0.0453
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 40.0,
+              "normalized_value": 0.158,
+              "weight": 0.24,
+              "contribution_score": 0.0379
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.018,
+            "Tool_wear_min": 0.158,
+            "Torque_Nm": 0.478,
+            "Process_temperature_K": 0.453,
+            "Rotational_speed_rpm": 0.451,
+            "Air_temperature_K": 0.454
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M004",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "L",
+            "air_temperature": 297.8,
+            "process_temperature": 308.0,
+            "rotational_speed": 1490.0,
+            "torque": 36.5,
+            "tool_wear": 50.0
+          },
+          "failure_probability": 0.0168,
+          "failure_probability_pct": 1.7,
+          "topsis_score": 0.6049,
+          "risk_level": "HIGH",
+          "action": "Schedule Maintenance",
+          "action_vi": "Lập kế hoạch bảo trì sớm",
+          "color": "#EA580C",
+          "badge_class": "bg-warning text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 36.5,
+              "normalized_value": 0.444,
+              "weight": 0.16,
+              "contribution_score": 0.071
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 50.0,
+              "normalized_value": 0.198,
+              "weight": 0.24,
+              "contribution_score": 0.0474
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 308.0,
+              "normalized_value": 0.367,
+              "weight": 0.1,
+              "contribution_score": 0.0367
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.014,
+            "Tool_wear_min": 0.198,
+            "Torque_Nm": 0.444,
+            "Process_temperature_K": 0.367,
+            "Rotational_speed_rpm": 0.442,
+            "Air_temperature_K": 0.362
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M005",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "L",
+            "air_temperature": 299.5,
+            "process_temperature": 309.7,
+            "rotational_speed": 1540.0,
+            "torque": 40.0,
+            "tool_wear": 30.0
+          },
+          "failure_probability": 0.0202,
+          "failure_probability_pct": 2.0,
+          "topsis_score": 0.5227,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 40.0,
+              "normalized_value": 0.492,
+              "weight": 0.16,
+              "contribution_score": 0.0787
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.7,
+              "normalized_value": 0.489,
+              "weight": 0.1,
+              "contribution_score": 0.0489
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1540.0,
+              "normalized_value": 0.487,
+              "weight": 0.07,
+              "contribution_score": 0.0341
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.018,
+            "Tool_wear_min": 0.119,
+            "Torque_Nm": 0.492,
+            "Process_temperature_K": 0.489,
+            "Rotational_speed_rpm": 0.487,
+            "Air_temperature_K": 0.492
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M003",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "H",
+            "air_temperature": 300.1,
+            "process_temperature": 310.3,
+            "rotational_speed": 1520.0,
+            "torque": 41.2,
+            "tool_wear": 15.0
+          },
+          "failure_probability": 0.0148,
+          "failure_probability_pct": 1.5,
+          "topsis_score": 0.3924,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 41.2,
+              "normalized_value": 0.508,
+              "weight": 0.16,
+              "contribution_score": 0.0813
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 310.3,
+              "normalized_value": 0.532,
+              "weight": 0.1,
+              "contribution_score": 0.0532
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1520.0,
+              "normalized_value": 0.469,
+              "weight": 0.07,
+              "contribution_score": 0.0329
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.012,
+            "Tool_wear_min": 0.059,
+            "Torque_Nm": 0.508,
+            "Process_temperature_K": 0.532,
+            "Rotational_speed_rpm": 0.469,
+            "Air_temperature_K": 0.538
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M001",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "L",
+            "air_temperature": 298.2,
+            "process_temperature": 308.5,
+            "rotational_speed": 1530.0,
+            "torque": 38.5,
+            "tool_wear": 25.0
+          },
+          "failure_probability": 0.0189,
+          "failure_probability_pct": 1.9,
+          "topsis_score": 0.2878,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 38.5,
+              "normalized_value": 0.471,
+              "weight": 0.16,
+              "contribution_score": 0.0754
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 308.5,
+              "normalized_value": 0.403,
+              "weight": 0.1,
+              "contribution_score": 0.0403
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1530.0,
+              "normalized_value": 0.478,
+              "weight": 0.07,
+              "contribution_score": 0.0335
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.017,
+            "Tool_wear_min": 0.099,
+            "Torque_Nm": 0.471,
+            "Process_temperature_K": 0.403,
+            "Rotational_speed_rpm": 0.478,
+            "Air_temperature_K": 0.392
+          },
+          "priority_rank": 5
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  },
+  {
+    "run_id": "20260923_214456_136801",
+    "created_at": "23/09/2026 21:44:56",
+    "timestamp": "2026-09-23T21:44:56.783429",
+    "total_machines": 10,
+    "counts": {
+      "CRITICAL": 5,
+      "HIGH": 0,
+      "MEDIUM": 2,
+      "NORMAL": 3
+    },
+    "top_priority_machine": "M001",
+    "top_machine_risk": "CRITICAL",
+    "top_machine_score": 0.8876,
+    "inputs": [
+      {
+        "air_temperature": 301.0,
+        "machine_id": "M001",
+        "process_temperature": 310.2,
+        "rotational_speed": 1530.0,
+        "tool_wear": 247.0,
+        "torque": 70.4,
+        "type": "L"
+      },
+      {
+        "air_temperature": 304.4,
+        "machine_id": "M002",
+        "process_temperature": 312.4,
+        "rotational_speed": 1337.0,
+        "tool_wear": 202.0,
+        "torque": 47.9,
+        "type": "M"
+      },
+      {
+        "air_temperature": 300.8,
+        "machine_id": "M003",
+        "process_temperature": 311.1,
+        "rotational_speed": 2166.0,
+        "tool_wear": 25.0,
+        "torque": 73.3,
+        "type": "L"
+      },
+      {
+        "air_temperature": 299.4,
+        "machine_id": "M004",
+        "process_temperature": 311.0,
+        "rotational_speed": 1697.0,
+        "tool_wear": 205.0,
+        "torque": 61.3,
+        "type": "M"
+      },
+      {
+        "air_temperature": 301.7,
+        "machine_id": "M005",
+        "process_temperature": 312.2,
+        "rotational_speed": 1509.0,
+        "tool_wear": 245.0,
+        "torque": 50.4,
+        "type": "M"
+      },
+      {
+        "air_temperature": 298.4,
+        "machine_id": "M006",
+        "process_temperature": 309.9,
+        "rotational_speed": 1333.0,
+        "tool_wear": 113.0,
+        "torque": 39.8,
+        "type": "L"
+      },
+      {
+        "air_temperature": 298.8,
+        "machine_id": "M007",
+        "process_temperature": 307.6,
+        "rotational_speed": 1433.0,
+        "tool_wear": 135.0,
+        "torque": 57.9,
+        "type": "L"
+      },
+      {
+        "air_temperature": 304.3,
+        "machine_id": "M008",
+        "process_temperature": 314.2,
+        "rotational_speed": 1678.0,
+        "tool_wear": 87.0,
+        "torque": 28.1,
+        "type": "H"
+      },
+      {
+        "air_temperature": 299.7,
+        "machine_id": "M009",
+        "process_temperature": 308.5,
+        "rotational_speed": 1629.0,
+        "tool_wear": 208.0,
+        "torque": 56.6,
+        "type": "M"
+      },
+      {
+        "air_temperature": 296.5,
+        "machine_id": "M010",
+        "process_temperature": 307.2,
+        "rotational_speed": 1357.0,
+        "tool_wear": 225.0,
+        "torque": 45.2,
+        "type": "L"
+      }
+    ],
+    "results": {
+      "total_machines": 10,
+      "counts": {
+        "CRITICAL": 5,
+        "HIGH": 0,
+        "MEDIUM": 2,
+        "NORMAL": 3
+      },
+      "top_priority_machine": "M001",
+      "top_machine_details": {
+        "machine_id": "M001",
+        "type": "L",
+        "raw_inputs": {
+          "machine_id": "M001",
+          "type": "L",
+          "air_temperature": 301.0,
+          "process_temperature": 310.2,
+          "rotational_speed": 1530.0,
+          "torque": 70.4,
+          "tool_wear": 247.0
+        },
+        "failure_probability": 0.8806,
+        "failure_probability_pct": 88.1,
+        "topsis_score": 0.8876,
+        "risk_level": "CRITICAL",
+        "action": "Immediate Maintenance",
+        "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+        "color": "#DC2626",
+        "badge_class": "bg-danger",
+        "contributing_factors": [
+          {
+            "criterion": "Failure_Probability",
+            "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+            "raw_value": 0.88,
+            "normalized_value": 0.945,
+            "weight": 0.38,
+            "contribution_score": 0.3592
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 247.0,
+            "normalized_value": 0.976,
+            "weight": 0.24,
+            "contribution_score": 0.2343
+          },
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 70.4,
+            "normalized_value": 0.909,
+            "weight": 0.16,
+            "contribution_score": 0.1455
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.945,
+          "Tool_wear_min": 0.976,
+          "Torque_Nm": 0.909,
+          "Process_temperature_K": 0.525,
+          "Rotational_speed_rpm": 0.478,
+          "Air_temperature_K": 0.608
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M001",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "L",
+            "air_temperature": 301.0,
+            "process_temperature": 310.2,
+            "rotational_speed": 1530.0,
+            "torque": 70.4,
+            "tool_wear": 247.0
+          },
+          "failure_probability": 0.8806,
+          "failure_probability_pct": 88.1,
+          "topsis_score": 0.8876,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.88,
+              "normalized_value": 0.945,
+              "weight": 0.38,
+              "contribution_score": 0.3592
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 247.0,
+              "normalized_value": 0.976,
+              "weight": 0.24,
+              "contribution_score": 0.2343
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 70.4,
+              "normalized_value": 0.909,
+              "weight": 0.16,
+              "contribution_score": 0.1455
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.945,
+            "Tool_wear_min": 0.976,
+            "Torque_Nm": 0.909,
+            "Process_temperature_K": 0.525,
+            "Rotational_speed_rpm": 0.478,
+            "Air_temperature_K": 0.608
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M009",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M009",
+            "type": "M",
+            "air_temperature": 299.7,
+            "process_temperature": 308.5,
+            "rotational_speed": 1629.0,
+            "torque": 56.6,
+            "tool_wear": 208.0
+          },
+          "failure_probability": 0.9318,
+          "failure_probability_pct": 93.2,
+          "topsis_score": 0.8462,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.93,
+              "normalized_value": 1.0,
+              "weight": 0.38,
+              "contribution_score": 0.38
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 208.0,
+              "normalized_value": 0.822,
+              "weight": 0.24,
+              "contribution_score": 0.1973
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 56.6,
+              "normalized_value": 0.72,
+              "weight": 0.16,
+              "contribution_score": 0.1152
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 1.0,
+            "Tool_wear_min": 0.822,
+            "Torque_Nm": 0.72,
+            "Process_temperature_K": 0.403,
+            "Rotational_speed_rpm": 0.568,
+            "Air_temperature_K": 0.508
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M004",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "M",
+            "air_temperature": 299.4,
+            "process_temperature": 311.0,
+            "rotational_speed": 1697.0,
+            "torque": 61.3,
+            "tool_wear": 205.0
+          },
+          "failure_probability": 0.8239,
+          "failure_probability_pct": 82.4,
+          "topsis_score": 0.8317,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.82,
+              "normalized_value": 0.884,
+              "weight": 0.38,
+              "contribution_score": 0.336
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 205.0,
+              "normalized_value": 0.81,
+              "weight": 0.24,
+              "contribution_score": 0.1945
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 61.3,
+              "normalized_value": 0.784,
+              "weight": 0.16,
+              "contribution_score": 0.1255
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.884,
+            "Tool_wear_min": 0.81,
+            "Torque_Nm": 0.784,
+            "Process_temperature_K": 0.583,
+            "Rotational_speed_rpm": 0.629,
+            "Air_temperature_K": 0.485
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M005",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "M",
+            "air_temperature": 301.7,
+            "process_temperature": 312.2,
+            "rotational_speed": 1509.0,
+            "torque": 50.4,
+            "tool_wear": 245.0
+          },
+          "failure_probability": 0.6784,
+          "failure_probability_pct": 67.8,
+          "topsis_score": 0.7372,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.68,
+              "normalized_value": 0.727,
+              "weight": 0.38,
+              "contribution_score": 0.2764
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 245.0,
+              "normalized_value": 0.968,
+              "weight": 0.24,
+              "contribution_score": 0.2324
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 50.4,
+              "normalized_value": 0.635,
+              "weight": 0.16,
+              "contribution_score": 0.1015
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.727,
+            "Tool_wear_min": 0.968,
+            "Torque_Nm": 0.635,
+            "Process_temperature_K": 0.669,
+            "Rotational_speed_rpm": 0.459,
+            "Air_temperature_K": 0.662
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M010",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M010",
+            "type": "L",
+            "air_temperature": 296.5,
+            "process_temperature": 307.2,
+            "rotational_speed": 1357.0,
+            "torque": 45.2,
+            "tool_wear": 225.0
+          },
+          "failure_probability": 0.7089,
+          "failure_probability_pct": 70.9,
+          "topsis_score": 0.7147,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.71,
+              "normalized_value": 0.76,
+              "weight": 0.38,
+              "contribution_score": 0.2889
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 225.0,
+              "normalized_value": 0.889,
+              "weight": 0.24,
+              "contribution_score": 0.2134
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 45.2,
+              "normalized_value": 0.563,
+              "weight": 0.16,
+              "contribution_score": 0.0901
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.76,
+            "Tool_wear_min": 0.889,
+            "Torque_Nm": 0.563,
+            "Process_temperature_K": 0.309,
+            "Rotational_speed_rpm": 0.322,
+            "Air_temperature_K": 0.262
+          },
+          "priority_rank": 5
+        },
+        {
+          "machine_id": "M002",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "M",
+            "air_temperature": 304.4,
+            "process_temperature": 312.4,
+            "rotational_speed": 1337.0,
+            "torque": 47.9,
+            "tool_wear": 202.0
+          },
+          "failure_probability": 0.3594,
+          "failure_probability_pct": 35.9,
+          "topsis_score": 0.4738,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 202.0,
+              "normalized_value": 0.798,
+              "weight": 0.24,
+              "contribution_score": 0.1916
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.36,
+              "normalized_value": 0.384,
+              "weight": 0.38,
+              "contribution_score": 0.1457
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 47.9,
+              "normalized_value": 0.6,
+              "weight": 0.16,
+              "contribution_score": 0.096
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.384,
+            "Tool_wear_min": 0.798,
+            "Torque_Nm": 0.6,
+            "Process_temperature_K": 0.683,
+            "Rotational_speed_rpm": 0.304,
+            "Air_temperature_K": 0.869
+          },
+          "priority_rank": 6
+        },
+        {
+          "machine_id": "M003",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "L",
+            "air_temperature": 300.8,
+            "process_temperature": 311.1,
+            "rotational_speed": 2166.0,
+            "torque": 73.3,
+            "tool_wear": 25.0
+          },
+          "failure_probability": 0.498,
+          "failure_probability_pct": 49.8,
+          "topsis_score": 0.447,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.5,
+              "normalized_value": 0.533,
+              "weight": 0.38,
+              "contribution_score": 0.2025
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 73.3,
+              "normalized_value": 0.949,
+              "weight": 0.16,
+              "contribution_score": 0.1519
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 2166.0,
+              "normalized_value": 1.0,
+              "weight": 0.07,
+              "contribution_score": 0.07
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.533,
+            "Tool_wear_min": 0.099,
+            "Torque_Nm": 0.949,
+            "Process_temperature_K": 0.59,
+            "Rotational_speed_rpm": 1.0,
+            "Air_temperature_K": 0.592
+          },
+          "priority_rank": 7
+        },
+        {
+          "machine_id": "M007",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M007",
+            "type": "L",
+            "air_temperature": 298.8,
+            "process_temperature": 307.6,
+            "rotational_speed": 1433.0,
+            "torque": 57.9,
+            "tool_wear": 135.0
+          },
+          "failure_probability": 0.2971,
+          "failure_probability_pct": 29.7,
+          "topsis_score": 0.3623,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 135.0,
+              "normalized_value": 0.534,
+              "weight": 0.24,
+              "contribution_score": 0.1281
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.3,
+              "normalized_value": 0.316,
+              "weight": 0.38,
+              "contribution_score": 0.1202
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 57.9,
+              "normalized_value": 0.738,
+              "weight": 0.16,
+              "contribution_score": 0.118
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.316,
+            "Tool_wear_min": 0.534,
+            "Torque_Nm": 0.738,
+            "Process_temperature_K": 0.338,
+            "Rotational_speed_rpm": 0.391,
+            "Air_temperature_K": 0.438
+          },
+          "priority_rank": 8
+        },
+        {
+          "machine_id": "M006",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M006",
+            "type": "L",
+            "air_temperature": 298.4,
+            "process_temperature": 309.9,
+            "rotational_speed": 1333.0,
+            "torque": 39.8,
+            "tool_wear": 113.0
+          },
+          "failure_probability": 0.0628,
+          "failure_probability_pct": 6.3,
+          "topsis_score": 0.1888,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 113.0,
+              "normalized_value": 0.447,
+              "weight": 0.24,
+              "contribution_score": 0.1072
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.8,
+              "normalized_value": 0.489,
+              "weight": 0.16,
+              "contribution_score": 0.0782
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.9,
+              "normalized_value": 0.504,
+              "weight": 0.1,
+              "contribution_score": 0.0504
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.064,
+            "Tool_wear_min": 0.447,
+            "Torque_Nm": 0.489,
+            "Process_temperature_K": 0.504,
+            "Rotational_speed_rpm": 0.301,
+            "Air_temperature_K": 0.408
+          },
+          "priority_rank": 9
+        },
+        {
+          "machine_id": "M008",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M008",
+            "type": "H",
+            "air_temperature": 304.3,
+            "process_temperature": 314.2,
+            "rotational_speed": 1678.0,
+            "torque": 28.1,
+            "tool_wear": 87.0
+          },
+          "failure_probability": 0.0303,
+          "failure_probability_pct": 3.0,
+          "topsis_score": 0.1724,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 87.0,
+              "normalized_value": 0.344,
+              "weight": 0.24,
+              "contribution_score": 0.0825
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 314.2,
+              "normalized_value": 0.813,
+              "weight": 0.1,
+              "contribution_score": 0.0813
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 28.1,
+              "normalized_value": 0.328,
+              "weight": 0.16,
+              "contribution_score": 0.0525
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.029,
+            "Tool_wear_min": 0.344,
+            "Torque_Nm": 0.328,
+            "Process_temperature_K": 0.813,
+            "Rotational_speed_rpm": 0.612,
+            "Air_temperature_K": 0.862
+          },
+          "priority_rank": 10
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  },
+  {
+    "run_id": "20260923_213852_a3d39b",
+    "created_at": "23/09/2026 21:38:52",
+    "timestamp": "2026-09-23T21:38:52.389109",
+    "total_machines": 10,
+    "counts": {
+      "CRITICAL": 4,
+      "HIGH": 1,
+      "MEDIUM": 1,
+      "NORMAL": 4
+    },
+    "top_priority_machine": "M001",
+    "top_machine_risk": "CRITICAL",
+    "top_machine_score": 0.9293,
+    "inputs": [
+      {
+        "machine_id": "M001",
+        "type": "M",
+        "air_temperature": 301.1,
+        "process_temperature": 312.5,
+        "rotational_speed": 1703,
+        "torque": 63.8,
+        "tool_wear": 224
+      },
+      {
+        "machine_id": "M002",
+        "type": "L",
+        "air_temperature": 302.6,
+        "process_temperature": 308.7,
+        "rotational_speed": 1248,
+        "torque": 55.7,
+        "tool_wear": 161
+      },
+      {
+        "machine_id": "M003",
+        "type": "M",
+        "air_temperature": 304.6,
+        "process_temperature": 312.6,
+        "rotational_speed": 1841,
+        "torque": 75.7,
+        "tool_wear": 171
+      },
+      {
+        "machine_id": "M004",
+        "type": "M",
+        "air_temperature": 300.6,
+        "process_temperature": 309.7,
+        "rotational_speed": 1368,
+        "torque": 58.8,
+        "tool_wear": 217
+      },
+      {
+        "machine_id": "M005",
+        "type": "H",
+        "air_temperature": 301.3,
+        "process_temperature": 311.4,
+        "rotational_speed": 1503,
+        "torque": 22.2,
+        "tool_wear": 135
+      },
+      {
+        "machine_id": "M006",
+        "type": "M",
+        "air_temperature": 301.5,
+        "process_temperature": 311.2,
+        "rotational_speed": 1382,
+        "torque": 39.4,
+        "tool_wear": 207
+      },
+      {
+        "machine_id": "M007",
+        "type": "M",
+        "air_temperature": 301.4,
+        "process_temperature": 311,
+        "rotational_speed": 1830,
+        "torque": 56.6,
+        "tool_wear": 73
+      },
+      {
+        "machine_id": "M008",
+        "type": "L",
+        "air_temperature": 298.3,
+        "process_temperature": 309.3,
+        "rotational_speed": 1760,
+        "torque": 39.5,
+        "tool_wear": 19
+      },
+      {
+        "machine_id": "M009",
+        "type": "M",
+        "air_temperature": 299.4,
+        "process_temperature": 308.8,
+        "rotational_speed": 1529,
+        "torque": 39.8,
+        "tool_wear": 16
+      },
+      {
+        "machine_id": "M010",
+        "type": "L",
+        "air_temperature": 297.7,
+        "process_temperature": 306,
+        "rotational_speed": 1247,
+        "torque": 30.9,
+        "tool_wear": 22
+      }
+    ],
+    "results": {
+      "total_machines": 10,
+      "counts": {
+        "CRITICAL": 4,
+        "HIGH": 1,
+        "MEDIUM": 1,
+        "NORMAL": 4
+      },
+      "top_priority_machine": "M001",
+      "top_machine_details": {
+        "machine_id": "M001",
+        "type": "M",
+        "raw_inputs": {
+          "machine_id": "M001",
+          "type": "M",
+          "air_temperature": 301.1,
+          "process_temperature": 312.5,
+          "rotational_speed": 1703.0,
+          "torque": 63.8,
+          "tool_wear": 224.0
+        },
+        "failure_probability": 0.8494,
+        "failure_probability_pct": 84.9,
+        "topsis_score": 0.9293,
+        "risk_level": "CRITICAL",
+        "action": "Immediate Maintenance",
+        "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+        "color": "#DC2626",
+        "badge_class": "bg-danger",
+        "contributing_factors": [
+          {
+            "criterion": "Failure_Probability",
+            "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+            "raw_value": 0.85,
+            "normalized_value": 0.912,
+            "weight": 0.38,
+            "contribution_score": 0.3464
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 224.0,
+            "normalized_value": 0.885,
+            "weight": 0.24,
+            "contribution_score": 0.2125
+          },
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 63.8,
+            "normalized_value": 0.819,
+            "weight": 0.16,
+            "contribution_score": 0.131
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.912,
+          "Tool_wear_min": 0.885,
+          "Torque_Nm": 0.819,
+          "Process_temperature_K": 0.691,
+          "Rotational_speed_rpm": 0.634,
+          "Air_temperature_K": 0.615
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M001",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "M",
+            "air_temperature": 301.1,
+            "process_temperature": 312.5,
+            "rotational_speed": 1703.0,
+            "torque": 63.8,
+            "tool_wear": 224.0
+          },
+          "failure_probability": 0.8494,
+          "failure_probability_pct": 84.9,
+          "topsis_score": 0.9293,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.85,
+              "normalized_value": 0.912,
+              "weight": 0.38,
+              "contribution_score": 0.3464
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 224.0,
+              "normalized_value": 0.885,
+              "weight": 0.24,
+              "contribution_score": 0.2125
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 63.8,
+              "normalized_value": 0.819,
+              "weight": 0.16,
+              "contribution_score": 0.131
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.912,
+            "Tool_wear_min": 0.885,
+            "Torque_Nm": 0.819,
+            "Process_temperature_K": 0.691,
+            "Rotational_speed_rpm": 0.634,
+            "Air_temperature_K": 0.615
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M004",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "M",
+            "air_temperature": 300.6,
+            "process_temperature": 309.7,
+            "rotational_speed": 1368.0,
+            "torque": 58.8,
+            "tool_wear": 217.0
+          },
+          "failure_probability": 0.7941,
+          "failure_probability_pct": 79.4,
+          "topsis_score": 0.8639,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.79,
+              "normalized_value": 0.852,
+              "weight": 0.38,
+              "contribution_score": 0.3238
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 217.0,
+              "normalized_value": 0.858,
+              "weight": 0.24,
+              "contribution_score": 0.2058
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 58.8,
+              "normalized_value": 0.75,
+              "weight": 0.16,
+              "contribution_score": 0.12
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.852,
+            "Tool_wear_min": 0.858,
+            "Torque_Nm": 0.75,
+            "Process_temperature_K": 0.489,
+            "Rotational_speed_rpm": 0.332,
+            "Air_temperature_K": 0.577
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M003",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "M",
+            "air_temperature": 304.6,
+            "process_temperature": 312.6,
+            "rotational_speed": 1841.0,
+            "torque": 75.7,
+            "tool_wear": 171.0
+          },
+          "failure_probability": 0.7148,
+          "failure_probability_pct": 71.5,
+          "topsis_score": 0.8216,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.71,
+              "normalized_value": 0.767,
+              "weight": 0.38,
+              "contribution_score": 0.2913
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 171.0,
+              "normalized_value": 0.676,
+              "weight": 0.24,
+              "contribution_score": 0.1622
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 75.7,
+              "normalized_value": 0.982,
+              "weight": 0.16,
+              "contribution_score": 0.1571
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.767,
+            "Tool_wear_min": 0.676,
+            "Torque_Nm": 0.982,
+            "Process_temperature_K": 0.698,
+            "Rotational_speed_rpm": 0.759,
+            "Air_temperature_K": 0.885
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M006",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M006",
+            "type": "M",
+            "air_temperature": 301.5,
+            "process_temperature": 311.2,
+            "rotational_speed": 1382.0,
+            "torque": 39.4,
+            "tool_wear": 207.0
+          },
+          "failure_probability": 0.7391,
+          "failure_probability_pct": 73.9,
+          "topsis_score": 0.778,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.74,
+              "normalized_value": 0.793,
+              "weight": 0.38,
+              "contribution_score": 0.3012
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 207.0,
+              "normalized_value": 0.818,
+              "weight": 0.24,
+              "contribution_score": 0.1964
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.4,
+              "normalized_value": 0.484,
+              "weight": 0.16,
+              "contribution_score": 0.0774
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.793,
+            "Tool_wear_min": 0.818,
+            "Torque_Nm": 0.484,
+            "Process_temperature_K": 0.597,
+            "Rotational_speed_rpm": 0.345,
+            "Air_temperature_K": 0.646
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M007",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M007",
+            "type": "M",
+            "air_temperature": 301.4,
+            "process_temperature": 311.0,
+            "rotational_speed": 1830.0,
+            "torque": 56.6,
+            "tool_wear": 73.0
+          },
+          "failure_probability": 0.7539,
+          "failure_probability_pct": 75.4,
+          "topsis_score": 0.6695,
+          "risk_level": "HIGH",
+          "action": "Schedule Maintenance",
+          "action_vi": "Lập kế hoạch bảo trì sớm",
+          "color": "#EA580C",
+          "badge_class": "bg-warning text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.75,
+              "normalized_value": 0.809,
+              "weight": 0.38,
+              "contribution_score": 0.3073
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 56.6,
+              "normalized_value": 0.72,
+              "weight": 0.16,
+              "contribution_score": 0.1152
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 73.0,
+              "normalized_value": 0.289,
+              "weight": 0.24,
+              "contribution_score": 0.0692
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.809,
+            "Tool_wear_min": 0.289,
+            "Torque_Nm": 0.72,
+            "Process_temperature_K": 0.583,
+            "Rotational_speed_rpm": 0.749,
+            "Air_temperature_K": 0.638
+          },
+          "priority_rank": 5
+        },
+        {
+          "machine_id": "M002",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "L",
+            "air_temperature": 302.6,
+            "process_temperature": 308.7,
+            "rotational_speed": 1248.0,
+            "torque": 55.7,
+            "tool_wear": 161.0
+          },
+          "failure_probability": 0.4483,
+          "failure_probability_pct": 44.8,
+          "topsis_score": 0.5552,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.45,
+              "normalized_value": 0.479,
+              "weight": 0.38,
+              "contribution_score": 0.1821
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 161.0,
+              "normalized_value": 0.636,
+              "weight": 0.24,
+              "contribution_score": 0.1527
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 55.7,
+              "normalized_value": 0.707,
+              "weight": 0.16,
+              "contribution_score": 0.1132
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.479,
+            "Tool_wear_min": 0.636,
+            "Torque_Nm": 0.707,
+            "Process_temperature_K": 0.417,
+            "Rotational_speed_rpm": 0.224,
+            "Air_temperature_K": 0.731
+          },
+          "priority_rank": 6
+        },
+        {
+          "machine_id": "M005",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "H",
+            "air_temperature": 301.3,
+            "process_temperature": 311.4,
+            "rotational_speed": 1503.0,
+            "torque": 22.2,
+            "tool_wear": 135.0
+          },
+          "failure_probability": 0.3327,
+          "failure_probability_pct": 33.3,
+          "topsis_score": 0.4014,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.33,
+              "normalized_value": 0.355,
+              "weight": 0.38,
+              "contribution_score": 0.1348
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 135.0,
+              "normalized_value": 0.534,
+              "weight": 0.24,
+              "contribution_score": 0.1281
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 311.4,
+              "normalized_value": 0.612,
+              "weight": 0.1,
+              "contribution_score": 0.0612
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.355,
+            "Tool_wear_min": 0.534,
+            "Torque_Nm": 0.247,
+            "Process_temperature_K": 0.612,
+            "Rotational_speed_rpm": 0.454,
+            "Air_temperature_K": 0.631
+          },
+          "priority_rank": 7
+        },
+        {
+          "machine_id": "M010",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M010",
+            "type": "L",
+            "air_temperature": 297.7,
+            "process_temperature": 306.0,
+            "rotational_speed": 1247.0,
+            "torque": 30.9,
+            "tool_wear": 22.0
+          },
+          "failure_probability": 0.2968,
+          "failure_probability_pct": 29.7,
+          "topsis_score": 0.2567,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.3,
+              "normalized_value": 0.316,
+              "weight": 0.38,
+              "contribution_score": 0.1201
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 30.9,
+              "normalized_value": 0.367,
+              "weight": 0.16,
+              "contribution_score": 0.0587
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 306.0,
+              "normalized_value": 0.223,
+              "weight": 0.1,
+              "contribution_score": 0.0223
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.316,
+            "Tool_wear_min": 0.087,
+            "Torque_Nm": 0.367,
+            "Process_temperature_K": 0.223,
+            "Rotational_speed_rpm": 0.223,
+            "Air_temperature_K": 0.354
+          },
+          "priority_rank": 8
+        },
+        {
+          "machine_id": "M008",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M008",
+            "type": "L",
+            "air_temperature": 298.3,
+            "process_temperature": 309.3,
+            "rotational_speed": 1760.0,
+            "torque": 39.5,
+            "tool_wear": 19.0
+          },
+          "failure_probability": 0.0352,
+          "failure_probability_pct": 3.5,
+          "topsis_score": 0.1229,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.5,
+              "normalized_value": 0.485,
+              "weight": 0.16,
+              "contribution_score": 0.0776
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1760.0,
+              "normalized_value": 0.686,
+              "weight": 0.07,
+              "contribution_score": 0.048
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.3,
+              "normalized_value": 0.46,
+              "weight": 0.1,
+              "contribution_score": 0.046
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.034,
+            "Tool_wear_min": 0.075,
+            "Torque_Nm": 0.485,
+            "Process_temperature_K": 0.46,
+            "Rotational_speed_rpm": 0.686,
+            "Air_temperature_K": 0.4
+          },
+          "priority_rank": 9
+        },
+        {
+          "machine_id": "M009",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M009",
+            "type": "M",
+            "air_temperature": 299.4,
+            "process_temperature": 308.8,
+            "rotational_speed": 1529.0,
+            "torque": 39.8,
+            "tool_wear": 16.0
+          },
+          "failure_probability": 0.0319,
+          "failure_probability_pct": 3.2,
+          "topsis_score": 0.1066,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.8,
+              "normalized_value": 0.489,
+              "weight": 0.16,
+              "contribution_score": 0.0782
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 308.8,
+              "normalized_value": 0.424,
+              "weight": 0.1,
+              "contribution_score": 0.0424
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1529.0,
+              "normalized_value": 0.477,
+              "weight": 0.07,
+              "contribution_score": 0.0334
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.031,
+            "Tool_wear_min": 0.063,
+            "Torque_Nm": 0.489,
+            "Process_temperature_K": 0.424,
+            "Rotational_speed_rpm": 0.477,
+            "Air_temperature_K": 0.485
+          },
+          "priority_rank": 10
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  },
+  {
+    "run_id": "20260923_213829_40a77a",
+    "created_at": "23/09/2026 21:38:29",
+    "timestamp": "2026-09-23T21:38:29.480395",
+    "total_machines": 10,
+    "counts": {
+      "CRITICAL": 3,
+      "HIGH": 0,
+      "MEDIUM": 1,
+      "NORMAL": 6
+    },
+    "top_priority_machine": "M001",
+    "top_machine_risk": "CRITICAL",
+    "top_machine_score": 0.9339,
+    "inputs": [
+      {
+        "machine_id": "M001",
+        "type": "H",
+        "air_temperature": 301.1,
+        "process_temperature": 314.4,
+        "rotational_speed": 1927,
+        "torque": 62.8,
+        "tool_wear": 234
+      },
+      {
+        "machine_id": "M002",
+        "type": "L",
+        "air_temperature": 298.5,
+        "process_temperature": 306.4,
+        "rotational_speed": 1332,
+        "torque": 51.6,
+        "tool_wear": 204
+      },
+      {
+        "machine_id": "M003",
+        "type": "H",
+        "air_temperature": 295.2,
+        "process_temperature": 304,
+        "rotational_speed": 2190,
+        "torque": 73.3,
+        "tool_wear": 195
+      },
+      {
+        "machine_id": "M004",
+        "type": "L",
+        "air_temperature": 297.1,
+        "process_temperature": 302.6,
+        "rotational_speed": 1616,
+        "torque": 57.2,
+        "tool_wear": 191
+      },
+      {
+        "machine_id": "M005",
+        "type": "L",
+        "air_temperature": 300.3,
+        "process_temperature": 310.6,
+        "rotational_speed": 1591,
+        "torque": 37.3,
+        "tool_wear": 51
+      },
+      {
+        "machine_id": "M006",
+        "type": "M",
+        "air_temperature": 299.7,
+        "process_temperature": 309.2,
+        "rotational_speed": 1326,
+        "torque": 39.4,
+        "tool_wear": 93
+      },
+      {
+        "machine_id": "M007",
+        "type": "L",
+        "air_temperature": 300.5,
+        "process_temperature": 308.7,
+        "rotational_speed": 1460,
+        "torque": 48.2,
+        "tool_wear": 69
+      },
+      {
+        "machine_id": "M008",
+        "type": "L",
+        "air_temperature": 300.1,
+        "process_temperature": 311.7,
+        "rotational_speed": 1530,
+        "torque": 42.4,
+        "tool_wear": 142
+      },
+      {
+        "machine_id": "M009",
+        "type": "L",
+        "air_temperature": 300.8,
+        "process_temperature": 310.2,
+        "rotational_speed": 1963,
+        "torque": 29,
+        "tool_wear": 32
+      },
+      {
+        "machine_id": "M010",
+        "type": "L",
+        "air_temperature": 298.6,
+        "process_temperature": 307.2,
+        "rotational_speed": 1348,
+        "torque": 32.6,
+        "tool_wear": 67
+      }
+    ],
+    "results": {
+      "total_machines": 10,
+      "counts": {
+        "CRITICAL": 3,
+        "HIGH": 0,
+        "MEDIUM": 1,
+        "NORMAL": 6
+      },
+      "top_priority_machine": "M001",
+      "top_machine_details": {
+        "machine_id": "M001",
+        "type": "H",
+        "raw_inputs": {
+          "machine_id": "M001",
+          "type": "H",
+          "air_temperature": 301.1,
+          "process_temperature": 314.4,
+          "rotational_speed": 1927.0,
+          "torque": 62.8,
+          "tool_wear": 234.0
+        },
+        "failure_probability": 0.719,
+        "failure_probability_pct": 71.9,
+        "topsis_score": 0.9339,
+        "risk_level": "CRITICAL",
+        "action": "Immediate Maintenance",
+        "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+        "color": "#DC2626",
+        "badge_class": "bg-danger",
+        "contributing_factors": [
+          {
+            "criterion": "Failure_Probability",
+            "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+            "raw_value": 0.72,
+            "normalized_value": 0.771,
+            "weight": 0.38,
+            "contribution_score": 0.293
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 234.0,
+            "normalized_value": 0.925,
+            "weight": 0.24,
+            "contribution_score": 0.222
+          },
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 62.8,
+            "normalized_value": 0.805,
+            "weight": 0.16,
+            "contribution_score": 0.1288
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.771,
+          "Tool_wear_min": 0.925,
+          "Torque_Nm": 0.805,
+          "Process_temperature_K": 0.827,
+          "Rotational_speed_rpm": 0.837,
+          "Air_temperature_K": 0.615
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M001",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "H",
+            "air_temperature": 301.1,
+            "process_temperature": 314.4,
+            "rotational_speed": 1927.0,
+            "torque": 62.8,
+            "tool_wear": 234.0
+          },
+          "failure_probability": 0.719,
+          "failure_probability_pct": 71.9,
+          "topsis_score": 0.9339,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.72,
+              "normalized_value": 0.771,
+              "weight": 0.38,
+              "contribution_score": 0.293
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 234.0,
+              "normalized_value": 0.925,
+              "weight": 0.24,
+              "contribution_score": 0.222
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 62.8,
+              "normalized_value": 0.805,
+              "weight": 0.16,
+              "contribution_score": 0.1288
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.771,
+            "Tool_wear_min": 0.925,
+            "Torque_Nm": 0.805,
+            "Process_temperature_K": 0.827,
+            "Rotational_speed_rpm": 0.837,
+            "Air_temperature_K": 0.615
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M002",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "L",
+            "air_temperature": 298.5,
+            "process_temperature": 306.4,
+            "rotational_speed": 1332.0,
+            "torque": 51.6,
+            "tool_wear": 204.0
+          },
+          "failure_probability": 0.6844,
+          "failure_probability_pct": 68.4,
+          "topsis_score": 0.771,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.68,
+              "normalized_value": 0.734,
+              "weight": 0.38,
+              "contribution_score": 0.2788
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 204.0,
+              "normalized_value": 0.806,
+              "weight": 0.24,
+              "contribution_score": 0.1935
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 51.6,
+              "normalized_value": 0.651,
+              "weight": 0.16,
+              "contribution_score": 0.1042
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.734,
+            "Tool_wear_min": 0.806,
+            "Torque_Nm": 0.651,
+            "Process_temperature_K": 0.252,
+            "Rotational_speed_rpm": 0.3,
+            "Air_temperature_K": 0.415
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M004",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "L",
+            "air_temperature": 297.1,
+            "process_temperature": 302.6,
+            "rotational_speed": 1616.0,
+            "torque": 57.2,
+            "tool_wear": 191.0
+          },
+          "failure_probability": 0.7098,
+          "failure_probability_pct": 71.0,
+          "topsis_score": 0.7566,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.71,
+              "normalized_value": 0.761,
+              "weight": 0.38,
+              "contribution_score": 0.2892
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 191.0,
+              "normalized_value": 0.755,
+              "weight": 0.24,
+              "contribution_score": 0.1812
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 57.2,
+              "normalized_value": 0.728,
+              "weight": 0.16,
+              "contribution_score": 0.1165
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.761,
+            "Tool_wear_min": 0.755,
+            "Torque_Nm": 0.728,
+            "Process_temperature_K": 0.0,
+            "Rotational_speed_rpm": 0.556,
+            "Air_temperature_K": 0.308
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M003",
+          "type": "H",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "H",
+            "air_temperature": 295.2,
+            "process_temperature": 304.0,
+            "rotational_speed": 2190.0,
+            "torque": 73.3,
+            "tool_wear": 195.0
+          },
+          "failure_probability": 0.2457,
+          "failure_probability_pct": 24.6,
+          "topsis_score": 0.4976,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 195.0,
+              "normalized_value": 0.771,
+              "weight": 0.24,
+              "contribution_score": 0.185
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 73.3,
+              "normalized_value": 0.949,
+              "weight": 0.16,
+              "contribution_score": 0.1519
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.25,
+              "normalized_value": 0.261,
+              "weight": 0.38,
+              "contribution_score": 0.0992
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.261,
+            "Tool_wear_min": 0.771,
+            "Torque_Nm": 0.949,
+            "Process_temperature_K": 0.079,
+            "Rotational_speed_rpm": 1.0,
+            "Air_temperature_K": 0.162
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M008",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M008",
+            "type": "L",
+            "air_temperature": 300.1,
+            "process_temperature": 311.7,
+            "rotational_speed": 1530.0,
+            "torque": 42.4,
+            "tool_wear": 142.0
+          },
+          "failure_probability": 0.0236,
+          "failure_probability_pct": 2.4,
+          "topsis_score": 0.2927,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 142.0,
+              "normalized_value": 0.561,
+              "weight": 0.24,
+              "contribution_score": 0.1347
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 42.4,
+              "normalized_value": 0.525,
+              "weight": 0.16,
+              "contribution_score": 0.084
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 311.7,
+              "normalized_value": 0.633,
+              "weight": 0.1,
+              "contribution_score": 0.0633
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.022,
+            "Tool_wear_min": 0.561,
+            "Torque_Nm": 0.525,
+            "Process_temperature_K": 0.633,
+            "Rotational_speed_rpm": 0.478,
+            "Air_temperature_K": 0.538
+          },
+          "priority_rank": 5
+        },
+        {
+          "machine_id": "M006",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M006",
+            "type": "M",
+            "air_temperature": 299.7,
+            "process_temperature": 309.2,
+            "rotational_speed": 1326.0,
+            "torque": 39.4,
+            "tool_wear": 93.0
+          },
+          "failure_probability": 0.0843,
+          "failure_probability_pct": 8.4,
+          "topsis_score": 0.2118,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 93.0,
+              "normalized_value": 0.368,
+              "weight": 0.24,
+              "contribution_score": 0.0882
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 39.4,
+              "normalized_value": 0.484,
+              "weight": 0.16,
+              "contribution_score": 0.0774
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.2,
+              "normalized_value": 0.453,
+              "weight": 0.1,
+              "contribution_score": 0.0453
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.087,
+            "Tool_wear_min": 0.368,
+            "Torque_Nm": 0.484,
+            "Process_temperature_K": 0.453,
+            "Rotational_speed_rpm": 0.294,
+            "Air_temperature_K": 0.508
+          },
+          "priority_rank": 6
+        },
+        {
+          "machine_id": "M007",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M007",
+            "type": "L",
+            "air_temperature": 300.5,
+            "process_temperature": 308.7,
+            "rotational_speed": 1460.0,
+            "torque": 48.2,
+            "tool_wear": 69.0
+          },
+          "failure_probability": 0.0693,
+          "failure_probability_pct": 6.9,
+          "topsis_score": 0.19,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 48.2,
+              "normalized_value": 0.604,
+              "weight": 0.16,
+              "contribution_score": 0.0967
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 69.0,
+              "normalized_value": 0.273,
+              "weight": 0.24,
+              "contribution_score": 0.0655
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 308.7,
+              "normalized_value": 0.417,
+              "weight": 0.1,
+              "contribution_score": 0.0417
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.071,
+            "Tool_wear_min": 0.273,
+            "Torque_Nm": 0.604,
+            "Process_temperature_K": 0.417,
+            "Rotational_speed_rpm": 0.415,
+            "Air_temperature_K": 0.569
+          },
+          "priority_rank": 7
+        },
+        {
+          "machine_id": "M009",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M009",
+            "type": "L",
+            "air_temperature": 300.8,
+            "process_temperature": 310.2,
+            "rotational_speed": 1963.0,
+            "torque": 29.0,
+            "tool_wear": 32.0
+          },
+          "failure_probability": 0.0683,
+          "failure_probability_pct": 6.8,
+          "topsis_score": 0.1731,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1963.0,
+              "normalized_value": 0.869,
+              "weight": 0.07,
+              "contribution_score": 0.0608
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 29.0,
+              "normalized_value": 0.341,
+              "weight": 0.16,
+              "contribution_score": 0.0545
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 310.2,
+              "normalized_value": 0.525,
+              "weight": 0.1,
+              "contribution_score": 0.0525
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.07,
+            "Tool_wear_min": 0.126,
+            "Torque_Nm": 0.341,
+            "Process_temperature_K": 0.525,
+            "Rotational_speed_rpm": 0.869,
+            "Air_temperature_K": 0.592
+          },
+          "priority_rank": 8
+        },
+        {
+          "machine_id": "M010",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M010",
+            "type": "L",
+            "air_temperature": 298.6,
+            "process_temperature": 307.2,
+            "rotational_speed": 1348.0,
+            "torque": 32.6,
+            "tool_wear": 67.0
+          },
+          "failure_probability": 0.1268,
+          "failure_probability_pct": 12.7,
+          "topsis_score": 0.1705,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 67.0,
+              "normalized_value": 0.265,
+              "weight": 0.24,
+              "contribution_score": 0.0636
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 32.6,
+              "normalized_value": 0.39,
+              "weight": 0.16,
+              "contribution_score": 0.0624
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.13,
+              "normalized_value": 0.133,
+              "weight": 0.38,
+              "contribution_score": 0.0505
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.133,
+            "Tool_wear_min": 0.265,
+            "Torque_Nm": 0.39,
+            "Process_temperature_K": 0.309,
+            "Rotational_speed_rpm": 0.314,
+            "Air_temperature_K": 0.423
+          },
+          "priority_rank": 9
+        },
+        {
+          "machine_id": "M005",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "L",
+            "air_temperature": 300.3,
+            "process_temperature": 310.6,
+            "rotational_speed": 1591.0,
+            "torque": 37.3,
+            "tool_wear": 51.0
+          },
+          "failure_probability": 0.0231,
+          "failure_probability_pct": 2.3,
+          "topsis_score": 0.1609,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 37.3,
+              "normalized_value": 0.455,
+              "weight": 0.16,
+              "contribution_score": 0.0727
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 310.6,
+              "normalized_value": 0.554,
+              "weight": 0.1,
+              "contribution_score": 0.0554
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 51.0,
+              "normalized_value": 0.202,
+              "weight": 0.24,
+              "contribution_score": 0.0484
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.021,
+            "Tool_wear_min": 0.202,
+            "Torque_Nm": 0.455,
+            "Process_temperature_K": 0.554,
+            "Rotational_speed_rpm": 0.533,
+            "Air_temperature_K": 0.554
+          },
+          "priority_rank": 10
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  },
+  {
+    "run_id": "20260923_213225_71e882",
+    "created_at": "23/09/2026 21:32:25",
+    "timestamp": "2026-09-23T21:32:25.600676",
+    "total_machines": 10,
+    "counts": {
+      "CRITICAL": 3,
+      "HIGH": 0,
+      "MEDIUM": 3,
+      "NORMAL": 4
+    },
+    "top_priority_machine": "M004",
+    "top_machine_risk": "CRITICAL",
+    "top_machine_score": 0.9152,
+    "inputs": [
+      {
+        "air_temperature": 301.6,
+        "machine_id": "M001",
+        "process_temperature": 311.0,
+        "rotational_speed": 1824.0,
+        "tool_wear": 225.0,
+        "torque": 62.3,
+        "type": "L"
+      },
+      {
+        "air_temperature": 302.1,
+        "machine_id": "M002",
+        "process_temperature": 308.9,
+        "rotational_speed": 1239.0,
+        "tool_wear": 164.0,
+        "torque": 45.5,
+        "type": "M"
+      },
+      {
+        "air_temperature": 299.3,
+        "machine_id": "M003",
+        "process_temperature": 309.0,
+        "rotational_speed": 1859.0,
+        "tool_wear": 112.0,
+        "torque": 74.3,
+        "type": "L"
+      },
+      {
+        "air_temperature": 301.4,
+        "machine_id": "M004",
+        "process_temperature": 311.5,
+        "rotational_speed": 1531.0,
+        "tool_wear": 228.0,
+        "torque": 59.3,
+        "type": "L"
+      },
+      {
+        "air_temperature": 299.2,
+        "machine_id": "M005",
+        "process_temperature": 309.7,
+        "rotational_speed": 1000,
+        "tool_wear": 97.0,
+        "torque": 37.3,
+        "type": "L"
+      },
+      {
+        "air_temperature": 299.6,
+        "machine_id": "M006",
+        "process_temperature": 309.7,
+        "rotational_speed": 1593.0,
+        "tool_wear": 172.0,
+        "torque": 33.5,
+        "type": "L"
+      },
+      {
+        "air_temperature": 302.9,
+        "machine_id": "M007",
+        "process_temperature": 313.0,
+        "rotational_speed": 1443.0,
+        "tool_wear": 183.0,
+        "torque": 56.5,
+        "type": "L"
+      },
+      {
+        "air_temperature": 295.8,
+        "machine_id": "M008",
+        "process_temperature": 305.1,
+        "rotational_speed": 1818.0,
+        "tool_wear": 73.0,
+        "torque": 40.1,
+        "type": "M"
+      },
+      {
+        "air_temperature": 298.3,
+        "machine_id": "M009",
+        "process_temperature": 306.6,
+        "rotational_speed": 1806.0,
+        "tool_wear": 57.0,
+        "torque": 49.0,
+        "type": "L"
+      },
+      {
+        "air_temperature": 298.3,
+        "machine_id": "M010",
+        "process_temperature": 307.6,
+        "rotational_speed": 1462.0,
+        "tool_wear": 8.0,
+        "torque": 50.0,
+        "type": "M"
+      }
+    ],
+    "results": {
+      "total_machines": 10,
+      "counts": {
+        "CRITICAL": 3,
+        "HIGH": 0,
+        "MEDIUM": 3,
+        "NORMAL": 4
+      },
+      "top_priority_machine": "M004",
+      "top_machine_details": {
+        "machine_id": "M004",
+        "type": "L",
+        "raw_inputs": {
+          "machine_id": "M004",
+          "type": "L",
+          "air_temperature": 301.4,
+          "process_temperature": 311.5,
+          "rotational_speed": 1531.0,
+          "torque": 59.3,
+          "tool_wear": 228.0
+        },
+        "failure_probability": 0.9287,
+        "failure_probability_pct": 92.9,
+        "topsis_score": 0.9152,
+        "risk_level": "CRITICAL",
+        "action": "Immediate Maintenance",
+        "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+        "color": "#DC2626",
+        "badge_class": "bg-danger",
+        "contributing_factors": [
+          {
+            "criterion": "Failure_Probability",
+            "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+            "raw_value": 0.93,
+            "normalized_value": 0.997,
+            "weight": 0.38,
+            "contribution_score": 0.3789
+          },
+          {
+            "criterion": "Tool_wear_min",
+            "label": "Độ mòn dụng cụ cao (High tool wear)",
+            "raw_value": 228.0,
+            "normalized_value": 0.901,
+            "weight": 0.24,
+            "contribution_score": 0.2163
+          },
+          {
+            "criterion": "Torque_Nm",
+            "label": "Mô-men xoắn hoạt động cao (High torque)",
+            "raw_value": 59.3,
+            "normalized_value": 0.757,
+            "weight": 0.16,
+            "contribution_score": 0.1211
+          }
+        ],
+        "normalized_criteria": {
+          "Failure_Probability": 0.997,
+          "Tool_wear_min": 0.901,
+          "Torque_Nm": 0.757,
+          "Process_temperature_K": 0.619,
+          "Rotational_speed_rpm": 0.479,
+          "Air_temperature_K": 0.638
+        },
+        "priority_rank": 1
+      },
+      "ranking": [
+        {
+          "machine_id": "M004",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M004",
+            "type": "L",
+            "air_temperature": 301.4,
+            "process_temperature": 311.5,
+            "rotational_speed": 1531.0,
+            "torque": 59.3,
+            "tool_wear": 228.0
+          },
+          "failure_probability": 0.9287,
+          "failure_probability_pct": 92.9,
+          "topsis_score": 0.9152,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.93,
+              "normalized_value": 0.997,
+              "weight": 0.38,
+              "contribution_score": 0.3789
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 228.0,
+              "normalized_value": 0.901,
+              "weight": 0.24,
+              "contribution_score": 0.2163
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 59.3,
+              "normalized_value": 0.757,
+              "weight": 0.16,
+              "contribution_score": 0.1211
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.997,
+            "Tool_wear_min": 0.901,
+            "Torque_Nm": 0.757,
+            "Process_temperature_K": 0.619,
+            "Rotational_speed_rpm": 0.479,
+            "Air_temperature_K": 0.638
+          },
+          "priority_rank": 1
+        },
+        {
+          "machine_id": "M001",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M001",
+            "type": "L",
+            "air_temperature": 301.6,
+            "process_temperature": 311.0,
+            "rotational_speed": 1824.0,
+            "torque": 62.3,
+            "tool_wear": 225.0
+          },
+          "failure_probability": 0.8542,
+          "failure_probability_pct": 85.4,
+          "topsis_score": 0.9058,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.85,
+              "normalized_value": 0.917,
+              "weight": 0.38,
+              "contribution_score": 0.3484
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 225.0,
+              "normalized_value": 0.889,
+              "weight": 0.24,
+              "contribution_score": 0.2134
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 62.3,
+              "normalized_value": 0.798,
+              "weight": 0.16,
+              "contribution_score": 0.1277
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.917,
+            "Tool_wear_min": 0.889,
+            "Torque_Nm": 0.798,
+            "Process_temperature_K": 0.583,
+            "Rotational_speed_rpm": 0.744,
+            "Air_temperature_K": 0.654
+          },
+          "priority_rank": 2
+        },
+        {
+          "machine_id": "M003",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M003",
+            "type": "L",
+            "air_temperature": 299.3,
+            "process_temperature": 309.0,
+            "rotational_speed": 1859.0,
+            "torque": 74.3,
+            "tool_wear": 112.0
+          },
+          "failure_probability": 0.7545,
+          "failure_probability_pct": 75.5,
+          "topsis_score": 0.7164,
+          "risk_level": "CRITICAL",
+          "action": "Immediate Maintenance",
+          "action_vi": "Bảo trì khẩn cấp ngay lập tức",
+          "color": "#DC2626",
+          "badge_class": "bg-danger",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.75,
+              "normalized_value": 0.809,
+              "weight": 0.38,
+              "contribution_score": 0.3076
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 74.3,
+              "normalized_value": 0.963,
+              "weight": 0.16,
+              "contribution_score": 0.1541
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 112.0,
+              "normalized_value": 0.443,
+              "weight": 0.24,
+              "contribution_score": 0.1062
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.809,
+            "Tool_wear_min": 0.443,
+            "Torque_Nm": 0.963,
+            "Process_temperature_K": 0.439,
+            "Rotational_speed_rpm": 0.775,
+            "Air_temperature_K": 0.477
+          },
+          "priority_rank": 3
+        },
+        {
+          "machine_id": "M009",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M009",
+            "type": "L",
+            "air_temperature": 298.3,
+            "process_temperature": 306.6,
+            "rotational_speed": 1806.0,
+            "torque": 49.0,
+            "tool_wear": 57.0
+          },
+          "failure_probability": 0.5284,
+          "failure_probability_pct": 52.8,
+          "topsis_score": 0.4856,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.53,
+              "normalized_value": 0.566,
+              "weight": 0.38,
+              "contribution_score": 0.215
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 49.0,
+              "normalized_value": 0.615,
+              "weight": 0.16,
+              "contribution_score": 0.0985
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 57.0,
+              "normalized_value": 0.225,
+              "weight": 0.24,
+              "contribution_score": 0.0541
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.566,
+            "Tool_wear_min": 0.225,
+            "Torque_Nm": 0.615,
+            "Process_temperature_K": 0.266,
+            "Rotational_speed_rpm": 0.727,
+            "Air_temperature_K": 0.4
+          },
+          "priority_rank": 4
+        },
+        {
+          "machine_id": "M007",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M007",
+            "type": "L",
+            "air_temperature": 302.9,
+            "process_temperature": 313.0,
+            "rotational_speed": 1443.0,
+            "torque": 56.5,
+            "tool_wear": 183.0
+          },
+          "failure_probability": 0.326,
+          "failure_probability_pct": 32.6,
+          "topsis_score": 0.473,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 183.0,
+              "normalized_value": 0.723,
+              "weight": 0.24,
+              "contribution_score": 0.1736
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.33,
+              "normalized_value": 0.348,
+              "weight": 0.38,
+              "contribution_score": 0.1321
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 56.5,
+              "normalized_value": 0.718,
+              "weight": 0.16,
+              "contribution_score": 0.1149
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.348,
+            "Tool_wear_min": 0.723,
+            "Torque_Nm": 0.718,
+            "Process_temperature_K": 0.727,
+            "Rotational_speed_rpm": 0.4,
+            "Air_temperature_K": 0.754
+          },
+          "priority_rank": 5
+        },
+        {
+          "machine_id": "M002",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M002",
+            "type": "M",
+            "air_temperature": 302.1,
+            "process_temperature": 308.9,
+            "rotational_speed": 1239.0,
+            "torque": 45.5,
+            "tool_wear": 164.0
+          },
+          "failure_probability": 0.3016,
+          "failure_probability_pct": 30.2,
+          "topsis_score": 0.4175,
+          "risk_level": "MEDIUM",
+          "action": "Inspection",
+          "action_vi": "Kiểm tra / Giám sát định kỳ",
+          "color": "#EAB308",
+          "badge_class": "bg-info text-dark",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 164.0,
+              "normalized_value": 0.648,
+              "weight": 0.24,
+              "contribution_score": 0.1556
+            },
+            {
+              "criterion": "Failure_Probability",
+              "label": "Xác suất hỏng hóc dự báo cao (High failure probability)",
+              "raw_value": 0.3,
+              "normalized_value": 0.321,
+              "weight": 0.38,
+              "contribution_score": 0.1221
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 45.5,
+              "normalized_value": 0.567,
+              "weight": 0.16,
+              "contribution_score": 0.0908
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.321,
+            "Tool_wear_min": 0.648,
+            "Torque_Nm": 0.567,
+            "Process_temperature_K": 0.432,
+            "Rotational_speed_rpm": 0.216,
+            "Air_temperature_K": 0.692
+          },
+          "priority_rank": 6
+        },
+        {
+          "machine_id": "M006",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M006",
+            "type": "L",
+            "air_temperature": 299.6,
+            "process_temperature": 309.7,
+            "rotational_speed": 1593.0,
+            "torque": 33.5,
+            "tool_wear": 172.0
+          },
+          "failure_probability": 0.0292,
+          "failure_probability_pct": 2.9,
+          "topsis_score": 0.2997,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 172.0,
+              "normalized_value": 0.68,
+              "weight": 0.24,
+              "contribution_score": 0.1632
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 33.5,
+              "normalized_value": 0.402,
+              "weight": 0.16,
+              "contribution_score": 0.0644
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.7,
+              "normalized_value": 0.489,
+              "weight": 0.1,
+              "contribution_score": 0.0489
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.028,
+            "Tool_wear_min": 0.68,
+            "Torque_Nm": 0.402,
+            "Process_temperature_K": 0.489,
+            "Rotational_speed_rpm": 0.535,
+            "Air_temperature_K": 0.5
+          },
+          "priority_rank": 7
+        },
+        {
+          "machine_id": "M005",
+          "type": "L",
+          "raw_inputs": {
+            "machine_id": "M005",
+            "type": "L",
+            "air_temperature": 299.2,
+            "process_temperature": 309.7,
+            "rotational_speed": 1000.0,
+            "torque": 37.3,
+            "tool_wear": 97.0
+          },
+          "failure_probability": 0.0623,
+          "failure_probability_pct": 6.2,
+          "topsis_score": 0.1963,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 97.0,
+              "normalized_value": 0.383,
+              "weight": 0.24,
+              "contribution_score": 0.092
+            },
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 37.3,
+              "normalized_value": 0.455,
+              "weight": 0.16,
+              "contribution_score": 0.0727
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 309.7,
+              "normalized_value": 0.489,
+              "weight": 0.1,
+              "contribution_score": 0.0489
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.063,
+            "Tool_wear_min": 0.383,
+            "Torque_Nm": 0.455,
+            "Process_temperature_K": 0.489,
+            "Rotational_speed_rpm": 0.0,
+            "Air_temperature_K": 0.469
+          },
+          "priority_rank": 8
+        },
+        {
+          "machine_id": "M008",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M008",
+            "type": "M",
+            "air_temperature": 295.8,
+            "process_temperature": 305.1,
+            "rotational_speed": 1818.0,
+            "torque": 40.1,
+            "tool_wear": 73.0
+          },
+          "failure_probability": 0.0032,
+          "failure_probability_pct": 0.3,
+          "topsis_score": 0.1636,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 40.1,
+              "normalized_value": 0.493,
+              "weight": 0.16,
+              "contribution_score": 0.0789
+            },
+            {
+              "criterion": "Tool_wear_min",
+              "label": "Độ mòn dụng cụ cao (High tool wear)",
+              "raw_value": 73.0,
+              "normalized_value": 0.289,
+              "weight": 0.24,
+              "contribution_score": 0.0692
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1818.0,
+              "normalized_value": 0.738,
+              "weight": 0.07,
+              "contribution_score": 0.0517
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.0,
+            "Tool_wear_min": 0.289,
+            "Torque_Nm": 0.493,
+            "Process_temperature_K": 0.158,
+            "Rotational_speed_rpm": 0.738,
+            "Air_temperature_K": 0.208
+          },
+          "priority_rank": 9
+        },
+        {
+          "machine_id": "M010",
+          "type": "M",
+          "raw_inputs": {
+            "machine_id": "M010",
+            "type": "M",
+            "air_temperature": 298.3,
+            "process_temperature": 307.6,
+            "rotational_speed": 1462.0,
+            "torque": 50.0,
+            "tool_wear": 8.0
+          },
+          "failure_probability": 0.0328,
+          "failure_probability_pct": 3.3,
+          "topsis_score": 0.1087,
+          "risk_level": "NORMAL",
+          "action": "Continue Operation",
+          "action_vi": "Tiếp tục vận hành bình thường",
+          "color": "#16A34A",
+          "badge_class": "bg-success",
+          "contributing_factors": [
+            {
+              "criterion": "Torque_Nm",
+              "label": "Mô-men xoắn hoạt động cao (High torque)",
+              "raw_value": 50.0,
+              "normalized_value": 0.629,
+              "weight": 0.16,
+              "contribution_score": 0.1007
+            },
+            {
+              "criterion": "Process_temperature_K",
+              "label": "Nhiệt độ quy trình gia công cao (High process temp)",
+              "raw_value": 307.6,
+              "normalized_value": 0.338,
+              "weight": 0.1,
+              "contribution_score": 0.0338
+            },
+            {
+              "criterion": "Rotational_speed_rpm",
+              "label": "Tốc độ quay bất thường (Rotational speed risk profile)",
+              "raw_value": 1462.0,
+              "normalized_value": 0.417,
+              "weight": 0.07,
+              "contribution_score": 0.0292
+            }
+          ],
+          "normalized_criteria": {
+            "Failure_Probability": 0.032,
+            "Tool_wear_min": 0.032,
+            "Torque_Nm": 0.629,
+            "Process_temperature_K": 0.338,
+            "Rotational_speed_rpm": 0.417,
+            "Air_temperature_K": 0.4
+          },
+          "priority_rank": 10
+        }
+      ],
+      "ahp_weights": {
+        "Failure_Probability": 0.38,
+        "Tool_wear_min": 0.24,
+        "Torque_Nm": 0.16,
+        "Process_temperature_K": 0.1,
+        "Rotational_speed_rpm": 0.07,
+        "Air_temperature_K": 0.05
+      },
+      "thresholds": {
+        "t_medium": 0.4063398793325486,
+        "t_high": 0.581565052743325,
+        "t_critical": 0.6741135672277587,
+        "final_model": "RandomForestClassifier (Local Pipeline)",
+        "data_source": "synthetic_fallback"
+      }
+    }
+  }
+]

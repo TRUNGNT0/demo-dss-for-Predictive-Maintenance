@@ -1,0 +1,153 @@
+/* Custom Compact Styling for DSS Maintenance Prioritization Web Demo */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --critical-color: #dc2626;
+    --high-color: #ea580c;
+    --medium-color: #ca8a04;
+    --normal-color: #16a34a;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #f1f5f9;
+    font-size: 0.875rem;
+}
+
+/* Fix Dropdown layering and clipping issues */
+.card-header {
+    position: relative;
+    z-index: 1030;
+}
+
+.dropdown-menu {
+    z-index: 1060 !important;
+    font-size: 0.825rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 6px;
+}
+
+.table thead.sticky-top {
+    z-index: 10 !important; /* Always below dropdowns and modals */
+}
+
+/* Compact Typography */
+.fs-7 {
+    font-size: 0.8rem;
+}
+
+.fs-8 {
+    font-size: 0.72rem;
+}
+
+.fw-extrabold {
+    font-weight: 800;
+}
+
+/* Compact Hero Banner */
+.compact-hero {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+    border-radius: 8px;
+}
+
+/* Compact Input Table */
+.table-compact th {
+    padding: 0.45rem 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    background-color: #f8fafc !important;
+}
+
+.table-compact td {
+    padding: 0.3rem 0.35rem;
+    vertical-align: middle;
+}
+
+.table-input-compact {
+    padding: 0.2rem 0.35rem;
+    font-size: 0.825rem;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.table-input-compact:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* KPI Cards */
+.kpi-card {
+    padding: 0.75rem 0.85rem;
+    border-radius: 8px;
+    background: #ffffff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Risk Badges */
+.badge-critical {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.badge-high {
+    background-color: #ffedd5;
+    color: #9a3412;
+    border: 1px solid #fdba74;
+}
+
+.badge-medium {
+    background-color: #fef9c3;
+    color: #854d0e;
+    border: 1px solid #fde047;
+}
+
+.badge-normal {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* Action button styling */
+#btnRunDSS {
+    font-size: 0.925rem;
+    padding: 0.55rem 1.5rem;
+    letter-spacing: 0.3px;
+    transition: all 0.2s ease;
+}
+
+#btnRunDSS:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(22, 163, 74, 0.35) !important;
+}
+
+/* Custom compact scrollbars */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

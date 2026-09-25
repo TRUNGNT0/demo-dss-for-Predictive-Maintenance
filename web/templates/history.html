@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block title %}Lịch Sử Chạy Demo | DSS Maintenance Prioritization{% endblock %}
+
+{% block content %}
+<div class="row g-3">
+    <div class="col-12">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-white py-2 px-3 border-bottom d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fw-bold text-dark fs-7">
+                        <i class="fa-solid fa-clock-rotate-left text-primary me-1"></i> Lịch Sử Các Lần Chạy Phân Tích
+                    </span>
+                    <span class="badge bg-light text-muted border fs-8">{{ runs|length }} lượt</span>
+                </div>
+
+                <div class="d-flex gap-2">
+                    <a href="{{ url_for('index') }}" class="btn btn-sm btn-outline-primary fs-8 py-1">
+                        <i class="fa-solid fa-arrow-left me-1"></i> Về Dashboard
+                    </a>
+                    <button class="btn btn-sm btn-outline-danger fs-8 py-1" onclick="clearAllHistory()">
+                        <i class="fa-solid fa-trash-can me-1"></i> Xóa toàn bộ lịch sử
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-body p-0">
+                {% if runs and runs|length > 0 %}
+                <div class="table-responsive">
+                    <table class="table table-hover table-compact table-striped align-middle mb-0 text-center">
+                        <thead class="table-light fs-8">
+                            <tr>
+                                <th>Mã Lượt (Run ID)</th>
+                                <th>Thời Gian</th>
+                                <th>Số Máy</th>
+                                <th>Máy Ưu Tiên #1</th>
+                                <th>Điểm TOPSIS Cao Nhất</th>
+                                <th>Phân Cấp Rủi Ro</th>
+                                <th style="width: 170px;">Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fs-8">
+                            {% for r in runs %}
+                            <tr id="history-row-{{ r.run_id }}">
+                                <td><code class="text-primary fw-bold">{{ r.run_id }}</code></td>
+                                <td class="text-muted fs-8">{{ r.created_at }}</td>
+                                <td><span class="badge bg-secondary">{{ r.total_machines }} máy</span></td>
+                                <td>
+                                    <strong class="text-dark">{{ r.top_priority_machine }}</strong>
+                                    {% if r.top_machine_risk == 'CRITICAL' %}
+                                        <span class="badge bg-danger ms-1 fs-8">CRITICAL</span>
+                                    {% elif r.top_machine_risk == 'HIGH' %}
+                                        <span class="badge bg-warning text-dark ms-1 fs-8">HIGH</span>
+                                    {% elif r.top_machine_risk == 'MEDIUM' %}
+                                        <span class="badge bg-info text-dark ms-1 fs-8">MEDIUM</span>
+                                    {% else %}
+                                        <span class="badge bg-success ms-1 fs-8">NORMAL</span>
+                                    {% endif %}
+                                </td>
+                                <td class="fw-bold text-primary">{{ "%.4f"|format(r.top_machine_score) }}</td>
+                                <td>
+                                    <div class="d-inline-flex gap-1 fs-8">
+                                        <span class="badge bg-danger" title="Critical">{{ r.counts.CRITICAL|default(0) }}</span>
+                                        <span class="badge bg-warning text-dark" title="High">{{ r.counts.HIGH|default(0) }}</span>
+                                        <span class="badge bg-info text-dark" title="Medium">{{ r.counts.MEDIUM|default(0) }}</span>
+                                        <span class="badge bg-success" title="Normal">{{ r.counts.NORMAL|default(0) }}</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary py-0 px-2 fs-8" onclick="viewHistoryDetail('{{ r.run_id }}')" title="Xem chi tiết">
+                                            <i class="fa-solid fa-eye"></i> Xem
+                                        </button>
+                                        <button class="btn btn-outline-success py-0 px-2 fs-8" onclick="reloadToDashboard('{{ r.run_id }}')" title="Nạp lại vào Dashboard">
+                                            <i class="fa-solid fa-arrow-rotate-right"></i> Nạp lại
+                                        </button>
+                                        <button class="btn btn-outline-danger py-0 px-2 fs-8" onclick="deleteHistoryRun('{{ r.run_id }}')" title="Xóa">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <div class="text-center py-5">
+                    <div class="text-muted mb-2"><i class="fa-regular fa-folder-open fa-2x"></i></div>
+                    <span class="text-muted fs-8 d-block mb-2">Chưa có lịch sử chạy demo nào.</span>
+                    <a href="{{ url_for('index') }}" class="btn btn-primary btn-sm fs-8">
+                        <i class="fa-solid fa-bolt me-1"></i> Chạy lượt phân tích đầu tiên
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Xem Chi Tiết Lượt Chạy Cũ -->
+<div class="modal fade" id="historyDetailModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-dark text-white py-2 px-3">
+                <h6 class="modal-title fw-bold">
+                    <i class="fa-solid fa-file-waveform text-info me-2"></i> Chi Tiết Lượt Chạy: <span id="modalRunId" class="text-warning"></span>
+                </h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3" id="modalRunContent">
+                <!-- Populated dynamically via JS -->
+            </div>
+            <div class="modal-footer py-1 px-3">
+                <button type="button" class="btn btn-sm btn-success fs-8" id="btnModalReloadToDash">
+                    <i class="fa-solid fa-arrow-rotate-right me-1"></i> Nạp Lại Vào Dashboard
+                </button>
+                <button type="button" class="btn btn-sm btn-secondary fs-8" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+async function viewHistoryDetail(runId) {
+    try {
+        const res = await fetch(`/api/history/${runId}`);
+        const data = await res.json();
+        if (!data.success || !data.run) {
+            alert("Không thể tải chi tiết lượt chạy.");
+            return;
+        }
+
+        const run = data.run;
+        document.getElementById('modalRunId').textContent = run.run_id;
+        
+        let html = `
+            <div class="row g-2 mb-3 text-center fs-8">
+                <div class="col-3">
+                    <div class="p-2 border rounded bg-light">
+                        <span class="fs-8 text-muted d-block">Thời gian:</span>
+                        <strong>${run.created_at}</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-2 border rounded bg-light">
+                        <span class="fs-8 text-muted d-block">Tổng số máy:</span>
+                        <strong>${run.total_machines} máy</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-2 border rounded bg-light">
+                        <span class="fs-8 text-muted d-block">Máy ưu tiên #1:</span>
+                        <strong class="text-danger">${run.top_priority_machine}</strong>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="p-2 border rounded bg-light">
+                        <span class="fs-8 text-muted d-block">Phân cấp rủi ro:</span>
+                        <span class="badge bg-danger">${run.counts.CRITICAL || 0} Critical</span>
+                        <span class="badge bg-warning text-dark">${run.counts.HIGH || 0} High</span>
+                    </div>
+                </div>
+            </div>
+
+            <h6 class="fw-bold fs-8 mb-2">Bảng Xếp Hạng Kết Quả:</h6>
+            <div class="table-responsive">
+                <table class="table table-sm table-compact table-bordered table-striped align-middle text-center mb-0">
+                    <thead class="table-dark fs-8">
+                        <tr>
+                            <th>Hạng</th>
+                            <th>Mã Máy</th>
+                            <th>Loại</th>
+                            <th>P(Failure)</th>
+                            <th>Điểm TOPSIS</th>
+                            <th>Mức Rủi Ro</th>
+                            <th>Hành Động Khuyến Nghị</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fs-8">
+        `;
+
+        const ranking = (run.results && run.results.ranking) || [];
+        ranking.forEach(r => {
+            html += `
+                <tr>
+                    <td><strong>#${r.priority_rank}</strong></td>
+                    <td class="fw-bold text-primary">${r.machine_id}</td>
+                    <td><span class="badge bg-light text-dark border">${r.type}</span></td>
+                    <td class="text-danger fw-semibold">${(r.failure_probability * 100).toFixed(1)}%</td>
+                    <td class="fw-bold">${r.topsis_score.toFixed(4)}</td>
+                    <td><span class="badge ${r.badge_class}">${r.risk_level}</span></td>
+                    <td class="text-start">${r.action_vi}</td>
+                </tr>
+            `;
+        });
+
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+
+        document.getElementById('modalRunContent').innerHTML = html;
+        document.getElementById('btnModalReloadToDash').onclick = function() {
+            reloadToDashboard(runId);
+        };
+
+        const modal = new bootstrap.Modal(document.getElementById('historyDetailModal'));
+        modal.show();
+    } catch (e) {
+        alert("Lỗi khi tải chi tiết: " + e.message);
+    }
+}
+
+async function reloadToDashboard(runId) {
+    try {
+        const res = await fetch(`/api/history/${runId}`);
+        const data = await res.json();
+        if (data.success && data.run) {
+            sessionStorage.setItem('reload_machines', JSON.stringify(data.run.inputs));
+            window.location.href = '/';
+        }
+    } catch (e) {
+        alert("Lỗi nạp lại dữ liệu: " + e.message);
+    }
+}
+
+async function deleteHistoryRun(runId) {
+    if (!confirm(`Bạn có chắc muốn xóa lượt chạy ${runId}?`)) return;
+    try {
+        const res = await fetch(`/api/history/delete/${runId}`, { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+            const row = document.getElementById(`history-row-${runId}`);
+            if (row) row.remove();
+        }
+    } catch (e) {
+        alert("Lỗi khi xóa: " + e.message);
+    }
+}
+
+async function clearAllHistory() {
+    if (!confirm("Bạn có chắc chắn muốn xóa TOÀN BỘ lịch sử chạy demo không?")) return;
+    try {
+        const res = await fetch('/api/history/clear', { method: 'POST' });
+        const data = await res.json();
+        if (data.success) {
+            window.location.reload();
+        }
+    } catch (e) {
+        alert("Lỗi khi xóa lịch sử: " + e.message);
+    }
+}
+</script>
+{% endblock %}
